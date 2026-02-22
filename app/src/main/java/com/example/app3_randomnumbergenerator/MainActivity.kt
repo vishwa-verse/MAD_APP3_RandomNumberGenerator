@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
 
 
         gBtn.setOnClickListener {
-            val i : Long = n1.text.toString().toLong()
-            val j : Long = n2.text.toString().toLong()
+            val i : Long ? = n1.text.toString().toLongOrNull()
+            val j : Long ? = n2.text.toString().toLongOrNull()
             if(i==null || j==null){
                 Toast.makeText(this, "Enter limits!", Toast.LENGTH_SHORT).show()
             }
